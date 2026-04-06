@@ -2,7 +2,6 @@ body{
     margin: 0px;
     background-color: rgb(250, 247, 247);
     overflow-x: hidden;
-    display: fixed;
 }
 
 nav{
@@ -142,7 +141,7 @@ nav{
 }
 
 
-.btn1:focus-within{
+.btn1.active{
     .menu1{
         display: block;
         z-index: 2300;
@@ -189,6 +188,7 @@ nav{
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 }
+
 
 .fash{
   margin-bottom: 20px;

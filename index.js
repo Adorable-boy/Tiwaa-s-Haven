@@ -3,6 +3,7 @@ const menuBtn = document.getElementById("menuBtn");
   const overlay = document.getElementById("overlay");
   const closeBtn = document.getElementById("closeBtn");
   const btn1 = document.getElementById("btn1");
+  const menu1 = document.getElementById("menu1");
 
   menuBtn.addEventListener("click", () => {
     menu.classList.add("active");
@@ -19,4 +20,21 @@ const menuBtn = document.getElementById("menuBtn");
     overlay.classList.remove("active");
   });
 
+
+let search = false;
+
+btn1.addEventListener("click", (event) => {
+  search = !search;
+    event.stopPropagation();
+  if (search) {
+  btn1.classList.add("active");
+  } else {
+  btn1.classList.remove("active");
+  }
+});
+
+
+menu1.addEventListener("click", (event) => {
+  event.stopPropagation();
+});
 
