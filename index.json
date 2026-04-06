@@ -1,0 +1,122 @@
+{
+    "Fashion" : [
+
+        {
+            "id": 1,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 2,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 3,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 4,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 5,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 6,
+            "poster": "images/zootopia (2).JPG",
+           "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 7,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 8,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        }
+
+    ],
+
+    
+
+    "MotherCare" : [
+        {
+            "id": 9,
+            "poster": "images/zootopia (2).JPG",
+           "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 10,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 11,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 12,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 13,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 14,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 15,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        },
+
+        {
+            "id": 16,
+            "poster": "images/zootopia (2).JPG",
+            "alt": "image",
+            "name": ""
+        }
+
+    ]
+}
