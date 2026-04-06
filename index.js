@@ -20,13 +20,3 @@ const menuBtn = document.getElementById("menuBtn");
   });
 
 
-let search = false;
-
-btn1.addEventListener("click", () => {
-  search = !search;
-  if (search) {
-    btn1.classList.add("active");
-  } else {
-    btn1.classList.remove("active");
-  }
-});
