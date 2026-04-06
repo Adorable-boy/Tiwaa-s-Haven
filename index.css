@@ -10,7 +10,6 @@ nav{
     padding-top: 8px;
     padding-bottom: 8px;
     align-items: center;
-    margin-bottom: 30px;
     justify-content: space-between;
     width: 100%;
 }
@@ -152,34 +151,122 @@ nav{
 
 
 
-.slider {
-    width: 390%;
-    overflow: hidden;
+
+  
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 650px;
+  
+  }
+  
+  .slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fade 18s infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+      border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+
+
+ 
+
+  
+  @keyframes fade {
+    /* Smooth cross-fade: appear quickly, stay visible, then fade out */
+    0% { opacity: 0; }
+    8% { opacity: 1; }
+    30% { opacity: 1; }
+    38% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+  /* Stagger slides so only one is visible at a time (supports up to 6 slides)
+     If you have more slides, add additional nth-child rules using the same spacing. */
+  .slideshow img:nth-child(1) { animation-delay: 0s; }
+  .slideshow img:nth-child(2) { animation-delay: -3s; }
+  .slideshow img:nth-child(3) { animation-delay: -6s; }
+  .slideshow img:nth-child(4) { animation-delay: -9s; }
+  .slideshow img:nth-child(5) { animation-delay: -12s; }
+  .slideshow img:nth-child(6) { animation-delay: -15s; }
+
+
+
+
+
+
+  /* Hover / focus styles: pause animation, dim slideshow, and reveal controls */
+  .slideshow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    transition: background 0.25s ease;
+    pointer-events: none;
     z-index: 1;
-    display: fixed;
   }
-  
-  .slides {
+
+  .slideshow .controls {
+    position: absolute;
+    inset: 0;
     display: flex;
-    white-space: nowrap;
-    animation: slide 15s linear infinite;
-    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.18s ease, visibility 0.18s;
+    pointer-events: none;
   }
-  
-  .slides img {
-    width: 400px;
-    height: 300px;
-    border-radius: 20px;
+
+  .slideshow .controls button {
+    pointer-events: auto;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255,255,255,0.95);
+    color: #111;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    transition: transform 0.12s ease, opacity 0.12s ease;
   }
-  
-  @keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+
+  .slideshow .controls button.secondary {
+    background: rgba(0,0,0,0.65);
+    color: #fff;
   }
+
+  .slideshow .controls button:focus {
+    outline: 3px solid rgba(255,255,255,0.25);
+    outline-offset: 2px;
+  }
+
+  /* Activate overlay + controls on hover or when focused (keyboard accessibility) */
+  .slideshow:hover::before,
+  .slideshow:focus-within::before {
+    background: rgba(0,0,0,0.36);
+  }
+
+  .slideshow:hover img,
+  .slideshow:focus-within img {
+    animation-play-state: paused;
+    filter: brightness(0.6);
+  }
+
+  .slideshow:hover .controls,
+  .slideshow:focus-within .controls {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
 
   h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -261,6 +348,7 @@ justify-items: center;
   border-radius: 20px;
   background-color: rgba(245, 245, 245, 0.36);
   padding: 6px 14px;
+  justify-content: center;
 }
 
 .searchsvg{
