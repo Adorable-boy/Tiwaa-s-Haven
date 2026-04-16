@@ -18,6 +18,7 @@ const menuBtn = document.getElementById("menuBtn");
   overlay.addEventListener("click", () => {
     menu.classList.remove("active");
     overlay.classList.remove("active");
+    btn1.classList.remove("active");
   });
 
 
@@ -31,7 +32,7 @@ btn1.addEventListener("click", (event) => {
   overlay.classList.add("active");
   } else {
   btn1.classList.remove("active");
-   overlay.classList.remove("active");
+  overlay.classList.remove("active");
   }
 });
 
