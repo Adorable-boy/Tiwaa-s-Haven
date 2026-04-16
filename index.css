@@ -2,6 +2,7 @@ body{
     margin: 0px;
     background-color: rgb(250, 247, 247);
     overflow-x: hidden;
+    padding-bottom: 100px;
 }
 
 nav{
@@ -197,76 +198,7 @@ nav{
 
 
 
-
-
-
-  /* Hover / focus styles: pause animation, dim slideshow, and reveal controls */
-  .slideshow::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0);
-    transition: background 0.25s ease;
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .slideshow .controls {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    z-index: 2;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.18s ease, visibility 0.18s;
-    pointer-events: none;
-  }
-
-  .slideshow .controls button {
-    pointer-events: auto;
-    padding: 10px 14px;
-    border-radius: 6px;
-    border: none;
-    background: rgba(255,255,255,0.95);
-    color: #111;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
-    transition: transform 0.12s ease, opacity 0.12s ease;
-  }
-
-  .slideshow .controls button.secondary {
-    background: rgba(0,0,0,0.65);
-    color: #fff;
-  }
-
-  .slideshow .controls button:focus {
-    outline: 3px solid rgba(255,255,255,0.25);
-    outline-offset: 2px;
-  }
-
-  /* Activate overlay + controls on hover or when focused (keyboard accessibility) */
-  .slideshow:hover::before,
-  .slideshow:focus-within::before {
-    background: rgba(0,0,0,0.36);
-  }
-
-  .slideshow:hover img,
-  .slideshow:focus-within img {
-    animation-play-state: paused;
-    filter: brightness(0.6);
-  }
-
-  .slideshow:hover .controls,
-  .slideshow:focus-within .controls {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-
+  
 
   h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -347,8 +279,11 @@ justify-items: center;
   border: none;
   border-radius: 20px;
   background-color: rgba(245, 245, 245, 0.36);
-  padding: 6px 14px;
+  padding: 12px 22px;
   justify-content: center;
+  align-items: center;
+  display: flex;
+  float: center;
 }
 
 .searchsvg{
@@ -374,3 +309,100 @@ justify-items: center;
   gap: 4px;
   grid-template-columns: repeat(2, 1fr);
 }
+
+
+    .svg-items{
+        color: #fff;
+        border-radius: 20px;
+        background: #3f3e3e;
+        border: #ffffff24 1px solid;
+        height: 30px;
+        width: 30px;
+        fill: #fff;
+        transition: transform ease 0.4s;
+        cursor: pointer;
+        align-content: center;
+    }
+
+
+
+    .svg-items svg:hover {
+      transform: scale(1.1);
+    }
+
+
+     .nav-links a[href="index.html"]:not(:hover) svg {
+            fill: white;
+        }
+
+
+     
+
+
+          footer{
+            background: #44444473;
+            backdrop-filter: blur(30px);
+            opacity: 0.993;
+            overflow-x: hidden;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width:100%;
+            z-index: 10;
+         }
+
+
+       
+
+        .nav-links a{
+            text-decoration: none;
+        }
+
+        .nav-links a:hover svg{
+            background-color: white;
+            fill: black;
+            transform: scale(1.1);
+        }
+       
+
+       .footer-items,
+       span{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+       }
+
+
+        .footer-labels{
+            font-size: 12px;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .nav-links svg{
+            font-weight: 600;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+            border-radius: 20px;
+            fill:  #ada7a7;
+            width: 30px;
+            height: 30px;
+            transition: all 0.4s ease;
+            border: #ffffff24 1px solid;
+        }
+
+
+.nav-links{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 15px;
+            padding-left: 15px;
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            border: none;
+        }

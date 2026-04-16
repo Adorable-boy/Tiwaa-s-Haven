@@ -28,8 +28,10 @@ btn1.addEventListener("click", (event) => {
     event.stopPropagation();
   if (search) {
   btn1.classList.add("active");
+  overlay.classList.add("active");
   } else {
   btn1.classList.remove("active");
+   overlay.classList.remove("active");
   }
 });
 
