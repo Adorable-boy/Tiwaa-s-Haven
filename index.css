@@ -200,72 +200,8 @@ nav{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.fashion{
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-justify-items: center;
-}
-
-@media screen and (min-width: 310px) and (max-width: 600px) {
-  .fashion{
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    align-items: center;
-  }
-  
-}
-
-@media screen and (min-width: 450px) and (max-width: 579px) {
-  .fash {
-    width: 100%;
-    min-width: 450px;
-  }
-
-  .fash img {
-    width: 100%;
-    height: auto;
-    min-height: 480px;
-  }
-}
 
 
-@media screen and (min-width: 580px) and (max-width: 830px) {
-  .fashion{
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    gap: 1em;
-  }
-  
-}
-
-
-@media screen and  (min-width: 880px) {
-  .fashion{
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    gap: 1em;
-  }
-  
-}
-
-
-.fash{
-  margin-bottom: 20px;
-  display: flex;
-    width: 280px;
-    height: auto;
-    border: 1.5px rgba(226, 238, 238, 0.803) solid;
-    border-radius: 10px;
-    flex-direction: column;
-    overflow: hidden;
-    transition: transform 0.4s;
-     margin-left: auto;
-    margin-right: auto;
-}
-
-.fash img{
-   height: 330px;
-}
 
 
 .search{
