@@ -138,11 +138,10 @@ nav{
 }
 
 
-.btn1.active{
-    .menu1{
+.btn1.active .menu1{
+
         display: block;
         z-index: 2300;
-    }
 
 }
 
